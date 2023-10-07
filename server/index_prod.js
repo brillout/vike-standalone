@@ -16,7 +16,7 @@ startServer()
 async function startServer() {
   const app = express()
 
-  app.use(express.static(`${root}/dist/client`))
+  app.use(express.static(`${root}/client`))
 
   app.get('*', async (req, res, next) => {
     // It's important to create an entirely new instance of Apollo Client for each request.
